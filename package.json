@@ -4,7 +4,9 @@
     "dev": "next",
     "build": "next build && next export",
     "start": "next start",
-    "setup": "node ./contentful/setup.js"
+    "setup": "node ./contentful/setup.js",
+    "prettier": "prettier --write .",
+    "test": "jest"
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^15.4.0",
@@ -16,7 +18,8 @@
   },
   "devDependencies": {
     "autoprefixer": "10.4.2",
-    "contentful-import": "^7.8.7",
+    "contentful-import": "^8.5.1",
+    "jest": "^29.2.2",
     "postcss": "8.4.5",
     "prettier": "2.7.1",
     "tailwindcss": "^3.0.15"
