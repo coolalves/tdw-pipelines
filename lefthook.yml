@@ -1,0 +1,23 @@
+pre-commit:
+  parallel: true
+  commands:
+    prettier:
+      glob: ".{js,ts,jsx,tsx}"
+      run: npm run format {staged_files}
+    test:
+      run: npm test
+    coverage:
+      glob: ".{js,ts,jsx,tsx}"
+      run: npm test -- --coverage
+
+pre-push:
+  parallel: true
+  commands:
+    prettier:
+      glob: ".{js,ts,jsx,tsx}"
+      run: npm run format {staged_files}
+    test:
+      run: npm test
+    coverage:
+      glob: ".{js,ts,jsx,tsx}"
+      run: npm test -- --coverage
