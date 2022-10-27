@@ -17,7 +17,7 @@ lint:
   dependencies:
     - install
   script:
-    - npx eslint .
+    - npx eslint index.js
 
 test:
   stage: validation
