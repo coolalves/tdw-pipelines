@@ -12,13 +12,6 @@ install:
     paths:
       - node_modules/
 
-lint:
-  stage: validation
-  dependencies:
-    - install
-  script:
-    - npm run lint
-
 test:
   stage: validation
   dependencies:
