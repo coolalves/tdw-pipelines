@@ -12,6 +12,13 @@ install:
     paths:
       - node_modules/
 
+lint:
+  stage: validation
+  dependencies:
+    - install
+  script:
+    - npx eslint .
+
 test:
   stage: validation
   dependencies:
@@ -28,5 +35,3 @@ build:
   stage: build
   script:
     - npm run build
-
-
