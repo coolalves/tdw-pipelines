@@ -17,7 +17,7 @@ lint:
   dependencies:
     - install
   script:
-    - npx eslint pages/index.js
+    - npm run lint
 
 test:
   stage: validation
