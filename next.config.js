@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+module.exports = {
   reactStrictMode: true,
   swcMinify: true,
-  images: { unoptimized: true },
+  images: {
+    unoptimized: true,
+  },
+  assetPrefix: "/",
 };
-
-module.exports = nextConfig;
-
