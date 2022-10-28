@@ -29,7 +29,7 @@ test:
 prettier:
   stage: validation
   script:
-    - npm run prettier
+    - npx prettier --write .
 
 build:
   stage: build
