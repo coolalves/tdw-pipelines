@@ -11,8 +11,8 @@ export async function getStaticProps() {
   return {
     props: {
       records: res.items,
+      fallback:false
     },
-    fallback:false
   };
 }
 
