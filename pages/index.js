@@ -21,11 +21,24 @@ export default function Records({ records }) {
   console.log(records);
 
   return (
-    <div className="record-list">
-      {" "}
-      {records.map((record) => (
-        <RecordCard key={record.sys.id} record={record} />
-      ))}{" "}
+    <div className="container">
+      <div className="record-list">
+        {records.map((record) => (
+          <RecordCard key={record.sys.id} record={record} />
+        ))}{" "}
+      </div>
+
+      <style jsx>{`
+        .container {
+          position: absolute;
+        }
+        .record-list {
+          width: 100%;
+          display: grid;
+          grid-template-columns: repeat(5, 25%);
+          grid-gap: 20px 60px;
+        }
+      `}</style>
     </div>
   );
 }
