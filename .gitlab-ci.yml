@@ -3,6 +3,7 @@ stages:
   - install
   - validation
   - build
+  - deploy
 
 install:
   stage: install
@@ -42,3 +43,12 @@ build:
   artifacts:
     paths:
       - out/
+
+deploy:
+  stage: deploy
+  script:
+    - npx netlify-cli deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --prod
+  rules:
+    - if: $CI_COMMIT_REF_NAME == 'main'
+      when: on_success
+      allow_failure: true
