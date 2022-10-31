@@ -18,9 +18,7 @@ export default function RecordCard({ record }) {
           <h4> {title} </h4> <p> {artist} </p>
         </div>
         <div className="actions">
-          <Link href={"/records/" + slug}>
-            <a> About</a>
-          </Link>
+          <Link href={"/records/" + slug} legacyBehavior><a>About</a></Link>
         </div>
       </div>
       <style jsx>{`
