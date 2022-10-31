@@ -1,4 +1,5 @@
 import { createClient } from "contentful";
+import RecordCard from "../components/RecordCard";
 
 export async function getStaticProps() {
   const client = createClient({
@@ -11,12 +12,20 @@ export async function getStaticProps() {
   return {
     props: {
       records: res.items,
-      fallback:false
+      fallback: false,
     },
   };
 }
 
 export default function Records({ records }) {
   console.log(records);
-  return <div className="record-list"> Record List </div>;
+
+  return (
+    <div className="record-list">
+      {" "}
+      {records.map((record) => (
+        <RecordCard key={record.sys.id} record={record} />
+      ))}{" "}
+    </div>
+  );
 }
