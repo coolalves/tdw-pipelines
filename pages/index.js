@@ -23,7 +23,7 @@ export default function Records({ records }) {
   return (
       <div className="container">
         <div className="header">
-          <h1> My favorite records of 2022</h1>
+          <h1> My favorite records of 2022 test</h1>
         </div>
 
         <div className="record-list">
