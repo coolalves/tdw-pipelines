@@ -21,10 +21,9 @@ export default function Records({ records }) {
   console.log(records);
 
   return (
-    <div className="main">
       <div className="container">
         <div className="header">
-          <h1> My 2022 favorite records (so far)</h1>
+          <h1> My favorite records of 2022</h1>
         </div>
 
         <div className="record-list">
@@ -34,9 +33,6 @@ export default function Records({ records }) {
         </div>
 
         <style jsx>{`
-          .main {
-            background-color: red;
-          }
           .container {
             position: relative;
             margin-top: auto;
@@ -44,7 +40,8 @@ export default function Records({ records }) {
             text-align: center;
             height: auto;
             margin: 0 auto;
-            adding: 10px;
+            max-width:100%;
+
           }
           .header {
             background-color: black;
@@ -64,6 +61,5 @@ export default function Records({ records }) {
           }
         `}</style>
       </div>
-    </div>
   );
 }

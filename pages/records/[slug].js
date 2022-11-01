@@ -36,33 +36,69 @@ export const getStaticProps = async ({ params }) => {
 };
 
 export default function Record({ record }) {
-  const { featuredImage, artist, thumbnail, title, duration, tracks, about } =
+  const { thumbnail, artist, title, duration, tracks, about } =
     record.fields;
 
   return (
-    <div>
+    <div className="container">
       <div className="banner">
-        <h2> {title} </h2>
-        <h2> {artist} </h2>
         <Image
-          src={"https:" + featuredImage.fields.file.url}
+          src={"https:" + thumbnail.fields.file.url}
           atl="img"
-          width={featuredImage.fields.file.details.image.width / 3}
-          height={featuredImage.fields.file.details.image.height / 3}
+          width= {520}
+          height={520}
+          className="img"
         />
       </div>
-
-      <div className="info">
-        <p> {duration} min </p>
-        {tracks.map((trk) => (
-          <span key={trk}>{trk}</span>
-        ))}
+      <div className="credits">
+        <h3> {artist} </h3>
+        <i> {title} </i>
       </div>
-
+        
       <div className="about">
-        <h3>About</h3>
         <div>{documentToReactComponents(about)}</div>
       </div>
+
+    <style jsx>{`
+    .container{
+      max-width:100%;
+      position: relative;
+      margin-top: 100px;
+      margin-bottom: auto;
+      text-align: center;
+      justify-content:center;
+    }
+    .credits{
+      margin:35px;
+    }
+    i{
+      text-transform:italic;
+      font-size: 40px; 
+      color: black;
+    } 
+    h3{
+      text-transform:uppercase;
+      font-weight: 600;
+      color: black;
+      font-size: 20px;
+      letter-spacing: 4px;
+      color: grey;
+    }
+    .banner{
+      display:inline-block;  
+    }
+    .banner h2{
+      background-color: black;
+      height: 50px;
+      line-height: 50px; 
+    }
+    .about{
+      margin-right:20%;
+      margin-left:20%;
+      text-align: justify;
+    }
+
+    `}</style>
     </div>
   );
 }
