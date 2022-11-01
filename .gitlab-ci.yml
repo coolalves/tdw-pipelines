@@ -32,7 +32,7 @@ prettier:
   script:
     - npx prettier --write .
 
-build:  
+build:
   stage: build
   script:
     - npm run build
