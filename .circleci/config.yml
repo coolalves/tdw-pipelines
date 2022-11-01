@@ -16,11 +16,10 @@ jobs:
       - checkout #git clone alias
       - run:
           name: "install npm dependencies"
-          command: npm install
-    validation:
-    # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.    
-    # Add steps to the job
-    # See: https://circleci.com/docs/2.0/configuration-reference/#steps
+          command: npm install   
+  validation:
+    docker:
+      - image: cimg/base:stable
     steps:
       - checkout #git clone alias
       - run:
@@ -32,7 +31,9 @@ jobs:
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
-  say-hello-workflow:
+  tdw_mp1_circleci:
     jobs:
       - install
-      - validation
+      - validation:
+            requires:
+              - install
