@@ -11,6 +11,7 @@ export default function RecordCard({ record }) {
           src={"https:" + thumbnail.fields.file.url}
           width={300 /*thumbnail.fields.file.details.image.width*/}
           height={300 /*thumbnail.fields.file.details.image.height*/}
+          alt="albumcover"
         />
       </div>
       <div className="content">
