@@ -23,7 +23,6 @@ jobs:
     docker:
       - image: cimg/base:stable
     steps:
-      - checkout #git clone alias
       - run:
           name: "jest"
           command: npm test
