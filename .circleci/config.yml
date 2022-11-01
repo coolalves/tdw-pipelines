@@ -16,7 +16,9 @@ jobs:
       - checkout #git clone alias
       - run:
           name: "install npm dependencies"
-          command: npm install   
+          command: npm install
+      - store_artifacts: 
+          paths: node_modules/
   validation:
     docker:
       - image: cimg/base:stable
