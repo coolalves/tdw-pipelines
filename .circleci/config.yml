@@ -36,8 +36,8 @@ jobs:
           filters:
             branches:
               only: /main
-          - store_artifacts:
-              path: out/
+      - store_artifacts:
+          path: out/
 
 
 # Invoke jobs via workflows
