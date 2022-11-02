@@ -17,6 +17,8 @@ jobs:
       - run:
           name: "node dependencies"
           command: npm install --save
+      - store_artifacts:
+          path: node_modules/
 
       - run: 
           name: "eslint"
