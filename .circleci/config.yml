@@ -35,8 +35,10 @@ jobs:
           command: npm run build || true #ensures this step returns a zero exit code allow failure:true
           filters:
             branches:
-              only: /main  
-      
+              only: /main
+          - store_artifacts:
+              path: out/
+
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
