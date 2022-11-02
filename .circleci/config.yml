@@ -38,8 +38,6 @@ jobs:
           filters:
             branches:
               only: /main
-      - store_artifacts:
-          path: out/
 
       - run:
           name: "netlify deployment"
