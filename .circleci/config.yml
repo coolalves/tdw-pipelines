@@ -29,6 +29,10 @@ jobs:
       - run: 
           name: "prettier"
           command: npx prettier --write .
+
+      - run: 
+          name: "build"
+          command: npm run build
       
       
 
