@@ -33,7 +33,9 @@ jobs:
       - run: 
           name: "build"
           command: npm run build || true #ensures this step returns a zero exit code allow failure:true
-      
+            filters:
+              branches:
+                only: /main  
       
 
 # Invoke jobs via workflows
