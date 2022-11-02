@@ -4,7 +4,7 @@ version: 2.1
 jobs:
   mp1_jobs:
     docker:
-      - image: circleci/node:19.0.0-browsers
+      - image: circleci/base:stable
 
     steps:
       - checkout #git clone alias
