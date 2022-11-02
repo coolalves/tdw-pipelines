@@ -43,7 +43,7 @@ jobs:
 
       - run
           name: "netlify deployment"
-        command: npx netlify-cli deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --prod 
+          command: npx netlify-cli deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --prod 
 
 
 # Invoke jobs via workflows
