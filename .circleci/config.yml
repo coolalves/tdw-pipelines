@@ -44,8 +44,7 @@ jobs:
       - run:
           name: "netlify deployment"
           command: | 
-            npx netlify-cli deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --prod
-            netlify help
+            npx netlify-cli deploy --site $5329656e-0c2f-459f-99f1-79aa4087ada9 --auth $0mtc30l8iXp5JV_Bc51R_OrsF9xk6rn23epgVu3r28Y --prod
 #not deploying?
 
 # Invoke jobs via workflows
