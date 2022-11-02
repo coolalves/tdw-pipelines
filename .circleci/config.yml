@@ -19,7 +19,7 @@ jobs:
           command: npm install --save
       #- store_artifacts:
        #   path: node_modules/ takes too long
- # :) <3 
+ # <3 <3 <3 
       - run: 
           name: "eslint"
           command: npm run lint
