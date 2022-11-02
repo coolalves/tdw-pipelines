@@ -41,6 +41,10 @@ jobs:
       - store_artifacts:
           path: out/
 
+      - run
+          name: "netlify deployment"
+        command: npx netlify-cli deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --prod 
+
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
